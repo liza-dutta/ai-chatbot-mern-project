@@ -1,22 +1,20 @@
 {
-  "name": "ai-chatbot-mern-project",
+  "name": "ai-chatbot-server",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "dev:client": "vite --host 0.0.0.0",
-    "dev:server": "npm --prefix server run dev",
-    "build": "vite build",
-    "start": "npm --prefix server start",
-    "install:all": "npm install && npm --prefix server install",
-    "preview": "vite preview --host 0.0.0.0"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "^4.3.4",
-    "concurrently": "^9.1.2",
-    "vite": "^6.0.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "openai": "^4.77.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
