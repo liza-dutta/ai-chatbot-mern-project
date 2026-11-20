@@ -1,0 +1,22 @@
+{
+  "name": "ai-chatbot-mern-project",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "vite --host 0.0.0.0",
+    "dev:server": "npm --prefix server run dev",
+    "build": "vite build",
+    "start": "npm --prefix server start",
+    "install:all": "npm install && npm --prefix server install",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "vite": "^6.0.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
